@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Password Strength Advisor</title>
+</head>
+<body>
+    <header class="header-container">
+        <h1 class="header-title">Password Strength Advisor and Encryption</h1>
+    </header>
+    <main>
+        <section class="password-input-container">
+            <h3>Relative Strenght of Password</h3>
+            <div class="strength-meter"></div>
+            <h2>Input test password</h2>
+            <input type="text" class="password-input" aria-labelledby="password" autofocus>
+        </section>
+        <section class="password-advice">
+            <h2>tips for creating a better password</h2>
+        </section>
+        <section class="encrypt">
+            <h2>Encrypt test password</h2>
+            <button class="btn">Encrypt Password</button>
+            <div class="encrypt-output">
+                <span>Output</span>
+            </div>
+            <button class="btn">Decrypt Password</button>
+            <div class="decrypt-output">
+                <span>Plaintext Output</span>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="./script.js"></script>
+</html>

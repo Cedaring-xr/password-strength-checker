@@ -1,0 +1,74 @@
+/* reset */
+*::before, *::after, * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+.header-container {
+    background-color: antiquewhite;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 30px;
+
+}
+
+.header-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* body */
+body {
+    background-color: #e0e6e6;
+    text-align: center;
+}
+
+.password-input-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.strength-meter {
+    border: 2px solid black;
+    margin: 20px;
+    height:2.5rem;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 1.5rem;
+    margin: 0 auto 30px;
+}
+
+.strenght-meter::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: calc(1% * var(--strength, 10));
+    background-color: #35ce6f;
+    transition: width 200ms;
+}
+
+.password-input {
+    font-size: 1.7rem;
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.encrypt {
+    margin-top: 100px;
+}
+
+.btn {
+    padding: 0.5rem;
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+    background-color: #1cb5c0;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px;
+}
