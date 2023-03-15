@@ -9,28 +9,38 @@
 </head>
 <body>
     <header class="header-container">
-        <h1 class="header-title">Password Strength Advisor and Encryption</h1>
+        <h1 class="header-title">Password Strength Advisor and Generator</h1>
     </header>
     <main>
         <section class="password-input-container">
             <h3>Relative Strenght of Password</h3>
-            <div class="strength-meter"></div>
+            <div class="strength-meter" id="strength-meter"></div>
             <h2>Input test password</h2>
-            <input type="text" class="password-input" aria-labelledby="password" autofocus>
+            <input type="text" class="password-input" id="password-input" aria-labelledby="password" autofocus>
         </section>
         <section class="password-advice">
             <h2>tips for creating a better password</h2>
+            <div class="password-tips" id="password-tips"></div>
         </section>
-        <section class="encrypt">
-            <h2>Encrypt test password</h2>
-            <button class="btn">Encrypt Password</button>
-            <div class="encrypt-output">
-                <span>Output</span>
+        <section class="generate">
+            <h2 class="generate-password">Generate New Password</h2>
+            <h3 class="password-display" id="passwordDisplay">password</h3>
+            <div class="form-container">
+                <form id="generatePasswordForm">
+                    <label for="characterAmountNumber">Number of Characters</label>
+                    <div>
+                        <input type="range" min="1" max="50" value="10" id="characterAmountRange">
+                        <input type="number" min="1" max="50" value="10" id="characterAmountNumber" class="number-input">
+                    </div>
+                    <label for="includeUppercase">Include Uppercase</label>
+                    <input type="checkbox" id="includeUppercase">
+                    <label for="includeNumber">Include Number</label>
+                    <input type="checkbox" id="includeNumber">
+                    <label for="includeSpecialCharacter">Include Special Character</label>
+                    <input type="checkbox" id="includeSpecialCharacter">
+                </form>
             </div>
-            <button class="btn">Decrypt Password</button>
-            <div class="decrypt-output">
-                <span>Plaintext Output</span>
-            </div>
+            <button class="btn" type="submit">Generate Password</button>
         </section>
     </main>
 </body>
